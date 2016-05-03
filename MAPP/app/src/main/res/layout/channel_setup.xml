@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/channelSetupFilter"
+        android:id="@+id/textView7"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="111dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/inputFilterHigh"
+        android:layout_below="@+id/textView7"
+        android:layout_alignStart="@+id/inputFilterClean"
+        android:text="@string/inputFilterHigh" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/channelFilterHigh"
+        android:id="@+id/channelFilterHigh"
+        android:layout_alignBottom="@+id/inputFilterHigh"
+        android:layout_alignStart="@+id/textView7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/channelSetupClean"
+        android:id="@+id/channelSetupClean"
+        android:layout_below="@+id/channelFilterHigh"
+        android:layout_alignStart="@+id/channelFilterHigh"
+        android:layout_marginTop="35dp" />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/inputFilterClean"
+        android:layout_alignBottom="@+id/channelSetupClean"
+        android:layout_centerHorizontal="true"
+        android:text="@string/inputFilterClean" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/channelSetupGas"
+        android:id="@+id/channelSetupGas"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/channelSetupClean"
+        android:layout_alignStart="@+id/channelGasHigh" />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/inputGasAlarm"
+        android:layout_below="@+id/channelSetupGas"
+        android:layout_centerHorizontal="true"
+        android:text="@string/inputGasAlarm" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/channelGasHigh"
+        android:id="@+id/channelGasHigh"
+        android:layout_alignBottom="@+id/inputGasAlarm"
+        android:layout_alignStart="@+id/channelSetupClean" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saveSetup"
+        android:id="@+id/saveSetup"
+        android:layout_marginBottom="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/inputGasAlarm" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancelSetup"
+        android:id="@+id/cancelSetup"
+        android:layout_alignTop="@+id/saveSetup"
+        android:layout_toEndOf="@+id/inputGasAlarm" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/channelSetupText"
+        android:id="@+id/channelSetupText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>

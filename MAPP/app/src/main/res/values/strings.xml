@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MAPP</string>
+
+//Text Views
+
+    <string name="loginText">Log In</string>
+    <string name="mainScreenText">DASPOS LAS-10</string>
+    <string name="usernameText">Username</string>
+    <string name="passwordText">Password</string>
+    <string name="myText">Password</string>
+    <string name="filterText">Filter Status</string>
+    <string name="gasText">Gas Status</string>
+    <string name="channelOverviewText">Channel Overview</string>
+    <string name="channelSetupText">Channel Setup</string>
+    <string name="channelSetupFilter">Filter</string>
+    <string name="channelFilterHigh">High</string>
+    <string name="channelSetupClean">Clean</string>
+    <string name="channelSetupGas">Gas</string>
+    <string name="channelGasHigh">High</string>
+
+//Inputs
+
+    <string name="usernameInput"></string>
+    <string name="inputFilterHigh"></string>
+    <string name="inputFilterClean"></string>
+    <string name="inputGasAlarm"></string>
+
+//Buttons
+
+    <string name="signInButton">Sign In</string>
+    <string name="recoverPassButton">Recover Password</string>
+    <string name="systemOverviewButton">System Overview</string>
+    <string name="listOfAccountsButton">List of Accounts</string>
+    <string name="contactButton">Contact Support</string>
+    <string name="signOutButton">Sign Out</string>
+    <string name="setupButton">Setup</string>
+    <string name="detector1">Detector 1</string>
+    <string name="detector2">Detector 2</string>
+    <string name="detector3">Detector 3</string>
+    <string name="saveSetup">Save</string>
+    <string name="cancelSetup">Cancel</string>
+
+
+</resources>

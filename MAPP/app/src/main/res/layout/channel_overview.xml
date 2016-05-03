@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/channelOverviewText"
+        android:id="@+id/channelOverviewText"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detector1"
+        android:id="@+id/detector1"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/channelOverviewText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detector2"
+        android:id="@+id/detector2"
+        android:layout_below="@+id/detector1"
+        android:layout_alignStart="@+id/detector1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detector3"
+        android:id="@+id/detector3"
+        android:layout_below="@+id/detector2"
+        android:layout_alignStart="@+id/detector2" />
+</RelativeLayout>
