@@ -21,7 +21,7 @@ private View channelSetupButton;
         MongoClientURI uri = new MongoClientURI( "mongodb://localhost:27017/icte8LAD_db" );
         MongoClient mongoClient = new MongoClient(uri);
         MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
-
+// .
 //List views for Gas
 /*
         //channel
