@@ -18,8 +18,11 @@ private View channelSetupButton;
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.system_overview);
-
-
+/*
+        MongoClientURI uri = new MongoClientURI( "mongodb://username:password@www.example.com:12345/db-name" );
+        MongoClient mongoClient = new MongoClient(uri);
+        MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
+*/
 
 //List views for Gas
 /*
