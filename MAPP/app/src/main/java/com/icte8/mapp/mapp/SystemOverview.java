@@ -22,7 +22,8 @@ private View channelSetupButton;
         MongoClient mongoClient = new MongoClient(uri);
         MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
 // JONAS sucks diskc
-// So does noooooooooooooo
+// this is actually working
+
 
 //List views for Gas
 /*
