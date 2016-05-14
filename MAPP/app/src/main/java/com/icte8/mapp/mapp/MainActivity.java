@@ -6,6 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
+import org.bson.BsonInt32;
+import org.bson.types.ObjectId;
+
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
@@ -31,8 +43,39 @@ public class MainActivity extends AppCompatActivity {
         final EditText username = (EditText) findViewById(R.id.usernameInput);
         final EditText password = (EditText) findViewById(R.id.passwordInput);
 
+        try {
 
+//        MongoClientURI uri = new MongoClientURI( "localhost", 27017);
+//        MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
+//            System.out.println(db.getCollection("detector_data").find());
+//            BasicDBObject query = new BasicDBObject();
+//            BasicDBObject field = new BasicDBObject();
+//            field.put("serial", 1);
+//            DBCursor cursor = db.getCollection("detector_data").find(query, field);
 
+//            int channel = 1;
+//            DBObject searchByChannel = new BasicDBObject("channel", new BsonInt32(channel));
+//            DBObject found = collectionCall.find(searchByChannel);
+
+            MongoClient mongoClient = new MongoClient("localhost", 27017);
+            DB db = mongoClient.getDB("icte8LAD_db");
+            System.out.println("Successfully connected to Database");
+
+            DBCollection collectionCall = db.getCollection("detector_data");
+            System.out.println("Collection collected succesfully");
+
+            BasicDBObject key = new BasicDBObject();
+            BasicDBObject value = new BasicDBObject();
+            value.put("channel", 1);
+
+            DBCursor cursor = collectionCall.find(key, value);
+            while (cursor.hasNext()) {
+                System.out.println("Hallo" + cursor.next());
+            }
+
+        } catch (Exception e) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() + "HALLOOOOOOO");
+        }
         signIn = findViewById(R.id.signinButton);
         signIn.setOnClickListener(
                 new View.OnClickListener() {
