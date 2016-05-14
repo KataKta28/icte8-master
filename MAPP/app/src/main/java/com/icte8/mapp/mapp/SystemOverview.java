@@ -22,7 +22,7 @@ private View channelSetupButton;
         MongoClient mongoClient = new MongoClient(uri);
         MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
 // JONAS sucks diskc
-// So does cata
+// So does noooooooooooooo
 
 //List views for Gas
 /*
