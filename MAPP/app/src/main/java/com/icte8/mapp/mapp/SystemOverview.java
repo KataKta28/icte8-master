@@ -21,8 +21,7 @@ private View channelSetupButton;
         MongoClientURI uri = new MongoClientURI( "mongodb://username:password@www.example.com:12345/db-name" );
         MongoClient mongoClient = new MongoClient(uri);
         MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
-// JONAS sucks diskc
-// So does cata
+// Works for Jonas too
 
 //List views for Gas
 /*
