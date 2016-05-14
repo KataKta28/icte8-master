@@ -21,7 +21,7 @@ private View channelSetupButton;
         MongoClientURI uri = new MongoClientURI( "mongodb://username:password@www.example.com:12345/db-name" );
         MongoClient mongoClient = new MongoClient(uri);
         MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
-// JONAS TESTTTTT
+// JONAS TEST
 
 //List views for Gas
 /*
