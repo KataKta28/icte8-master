@@ -5,10 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoDatabase;
-
 public class SystemOverview extends AppCompatActivity{
 
 private View channelSetupButton;
@@ -17,10 +13,6 @@ private View channelSetupButton;
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.system_overview);
-
-        MongoClientURI uri = new MongoClientURI( "mongodb://localhost:27017/icte8LAD_db" );
-        MongoClient mongoClient = new MongoClient(uri);
-        MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
 
 //List views for Gas
 /*
