@@ -22,7 +22,7 @@ private View channelSetupButton;
 
 
 //List views for Gas
-
+/*
         //channel
         ListView myListView1 = (ListView) findViewById(R.id.listView1);
         List<String> myStringArray1 = new ArrayList<>();
@@ -72,7 +72,7 @@ private View channelSetupButton;
                 android.R.layout.simple_list_item_1,
                 myStringArray4 );
         myListView4.setAdapter(arrayAdapter4);
-
+*/
 
 
         channelSetupButton = findViewById(R.id.setupButton);

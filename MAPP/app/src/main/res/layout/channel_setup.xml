@@ -6,7 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/channelSetupFilter"
+        android:text="@string/filter"
         android:id="@+id/textView7"
         android:layout_marginStart="35dp"
         android:layout_marginTop="111dp"
@@ -19,15 +19,15 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/inputFilterHigh"
+        android:text="@string/inputFilterHigh"
         android:layout_below="@+id/textView7"
-        android:layout_alignStart="@+id/inputFilterClean"
-        android:text="@string/inputFilterHigh" />
+        android:layout_toStartOf="@+id/cancelSetup" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/channelFilterHigh"
+        android:text="@string/filterHigh"
         android:id="@+id/channelFilterHigh"
         android:layout_alignBottom="@+id/inputFilterHigh"
         android:layout_alignStart="@+id/textView7" />
@@ -36,31 +36,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/channelSetupClean"
-        android:id="@+id/channelSetupClean"
-        android:layout_below="@+id/channelFilterHigh"
-        android:layout_alignStart="@+id/channelFilterHigh"
-        android:layout_marginTop="35dp" />
-
-    <EditText
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/inputFilterClean"
-        android:layout_alignBottom="@+id/channelSetupClean"
-        android:layout_centerHorizontal="true"
-        android:text="@string/inputFilterClean" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/channelSetupGas"
+        android:text="@string/gas"
         android:id="@+id/channelSetupGas"
         android:layout_marginTop="51dp"
-        android:layout_below="@+id/channelSetupClean"
-        android:layout_alignStart="@+id/channelGasHigh" />
+        android:layout_alignStart="@+id/channelGasHigh"
+        android:layout_below="@+id/channelFilterHigh" />
 
     <EditText
         android:layout_width="70dp"
@@ -76,10 +56,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/channelGasHigh"
+        android:text="@string/gasHigh"
         android:id="@+id/channelGasHigh"
         android:layout_alignBottom="@+id/inputGasAlarm"
-        android:layout_alignStart="@+id/channelSetupClean" />
+        android:layout_alignStart="@+id/channelFilterHigh" />
 
     <Button
         android:layout_width="wrap_content"

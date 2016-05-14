@@ -12,11 +12,21 @@
     <string name="gasText">Gas Status</string>
     <string name="channelOverviewText">Channel Overview</string>
     <string name="channelSetupText">Channel Setup</string>
-    <string name="channelSetupFilter">Filter</string>
-    <string name="channelFilterHigh">High</string>
-    <string name="channelSetupClean">Clean</string>
-    <string name="channelSetupGas">Gas</string>
-    <string name="channelGasHigh">High</string>
+
+    <string name="filter">Filter</string>
+    <string name="gas">Gas</string>
+
+    <string name="filterChannel">Channel</string>
+    <string name="filterStatus">Status</string>
+    <string name="filterLevel">Level</string>
+    <string name="filterHigh">High</string>
+
+    <string name="gasChannel">Channel</string>
+    <string name="gasStatus">Status</string>
+    <string name="gasLevel">Level</string>
+    <string name="gasHigh">High</string>
+
+
 
 //Inputs
 
