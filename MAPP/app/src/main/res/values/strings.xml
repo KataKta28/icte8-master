@@ -25,8 +25,19 @@
     <string name="gasStatus">Status</string>
     <string name="gasLevel">Level</string>
     <string name="gasHigh">High</string>
-
-
+    
+    <string name="contact">Contact</string>
+    <string name="contact_phone">Phone:</string>
+    <string name="contact_phone_no">+45 2815 4150</string>
+    <string name="contact_comp_name">DASPOS A/S</string>
+    <string name="contact_comp_adr_road">Gl. Klausdalsbrovej 493&#8211;495</string>
+    <string name="contact_comp_city">2730 Herlev</string>
+    <string name="contact_comp_country">Denmark</string>
+    <string name="contact_email_service">Service:</string>
+    <string name="contact_email_service_adr">service@daspos.com</string>
+    <string name="contact_email_admin">Administration:</string>
+    <string name="contact_email_admin_adr">admin@daspos.com</string>
+    
 
 //Inputs
 
