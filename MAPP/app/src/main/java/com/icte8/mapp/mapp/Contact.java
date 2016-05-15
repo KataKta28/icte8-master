@@ -15,10 +15,11 @@ public class Contact extends AppCompatActivity {
     private TextView service_email;
     private TextView admin_email;
 
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contact);
 
-    phone_no = findViewById(R.id.contact_phone_no);
+        //phone_no = findViewById(R.id.contact_phone_no);
 
+    }
 }

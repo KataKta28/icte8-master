@@ -80,7 +80,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/contact_email_service_adr"
         android:id="@+id/contact_service_email_adr"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:autoLink="email"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -98,6 +99,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/contact_email_admin_adr"
         android:id="@+id/contact_admin_email_adr"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:autoLink="email"/>
 
 </RelativeLayout>

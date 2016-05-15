@@ -9,6 +9,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     private View overviewButton;
     private View signOut;
+    private View contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -19,6 +20,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
         overviewButton = findViewById(R.id.systemOverviewButton);
         signOut = findViewById(R.id.singOutButton);
+        contact = findViewById(R.id.contactButton);
 
 
         overviewButton.setOnClickListener(
@@ -30,11 +32,14 @@ public class MainScreenActivity extends AppCompatActivity {
                     }
                 });
 
+        contact.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View V) {
+                        startActivity(new Intent(MainScreenActivity.this, Contact.class));
 
-
-
-
-
+                    }
+                });
 
 
         signOut.setOnClickListener(
