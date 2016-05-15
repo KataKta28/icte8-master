@@ -117,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }}
 
-
     public static byte[] generateSalt(){
         byte[] salt = new byte[16];
         RANDOM.nextBytes(salt);
