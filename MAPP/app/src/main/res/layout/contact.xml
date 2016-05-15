@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent" android:layout_marginLeft="10dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="10dp"
+        android:text="@string/contact"
+        android:id="@+id/contact_header" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="30dp"
+        android:text="@string/contact_comp_name"
+        android:layout_below="@+id/contact_header"
+        android:id="@+id/contact_daspos" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_daspos"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="15dp"
+        android:text="@string/contact_comp_adr_road"
+        android:id="@+id/contact_adr_road" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_adr_road"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/contact_comp_city"
+        android:id="@+id/contact_adr_city" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_adr_city"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/contact_comp_country"
+        android:id="@+id/contact_adr_country" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_adr_country"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="10dp"
+        android:text="@string/contact_phone"
+        android:id="@+id/contact_phone_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_phone_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/contact_phone_no"
+        android:id="@+id/contact_phone_no"
+        android:layout_gravity="center_horizontal"
+        android:autoLink="phone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_phone_no"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="10dp"
+        android:text="@string/contact_email_service"
+        android:id="@+id/contact_service_email_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_service_email_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/contact_email_service_adr"
+        android:id="@+id/contact_service_email_adr"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_service_email_adr"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/contact_email_admin"
+        android:id="@+id/contact_admin_email_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_admin_email_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/contact_email_admin_adr"
+        android:id="@+id/contact_admin_email_adr"
+        android:layout_gravity="center_horizontal" />
+
+</RelativeLayout>
