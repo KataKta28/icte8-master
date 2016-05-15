@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class SystemOverview extends AppCompatActivity{
 
@@ -14,58 +16,8 @@ private View channelSetupButton;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.system_overview);
 
-//List views for Gas
-/*
-        //channel
-        ListView myListView1 = (ListView) findViewById(R.id.listView1);
-        List<String> myStringArray1 = new ArrayList<>();
-        myStringArray1.add("1");
-        myStringArray1.add("2");
-        myStringArray1.add("3");
-        ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                myStringArray1 );
-        myListView1.setAdapter(arrayAdapter1);
-
-        //status
-        ListView myListView2 = (ListView) findViewById(R.id.listView2);
-        List<String> myStringArray2 = new ArrayList<>();
-        myStringArray2.add("Active");
-        myStringArray2.add("Active");
-        myStringArray2.add("Active");
-        ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                myStringArray2 );
-        myListView2.setAdapter(arrayAdapter2);
-
-
-        //level
-        ListView myListView3 = (ListView) findViewById(R.id.listView3);
-        List<String> myStringArray3 = new ArrayList<>();
-        myStringArray3.add("OK");
-        myStringArray3.add("OK");
-        myStringArray3.add("OK");
-        ArrayAdapter<String> arrayAdapter3 = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                myStringArray3 );
-        myListView3.setAdapter(arrayAdapter3);
-
-
-        //high
-        ListView myListView4 = (ListView) findViewById(R.id.listView4);
-        List<String> myStringArray4 = new ArrayList<>();
-        myStringArray4.add("100");
-        myStringArray4.add("100");
-        myStringArray4.add("1");
-        ArrayAdapter<String> arrayAdapter4 = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                myStringArray4 );
-        myListView4.setAdapter(arrayAdapter4);
-*/
+            populateFilterView();
+            populateGasView();
 
 
         channelSetupButton = findViewById(R.id.setupButton);
@@ -78,4 +30,37 @@ private View channelSetupButton;
                     }
                 });
     }
-}
+
+    private void populateFilterView() {
+                //Create list of hardcoded items
+            String[] myItems = {"       1         Bla          bla",
+                                "       2         bla          bla",
+                                "       3         BLa         Blaa"};
+                //Build adapter
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                    this, //context
+                    R.layout.listview, //Layout to use to display stuff
+                    myItems); // Items to be displayed
+            //Listview configuration
+            ListView list = (ListView) findViewById(R.id.filterListView);
+            list.setAdapter(adapter);
+
+         }
+
+    private void populateGasView() {
+        //Create list of hardcoded items
+        String[] myItems = {"       1         Bla          bla",
+                "       2         bla          bla",
+                "       3         BLa         Blaa"};
+        //Build adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this, //context
+                R.layout.listview, //Layout to use to display stuff
+                myItems); // Items to be displayed
+        //Listview configuration
+        ListView list = (ListView) findViewById(R.id.gasListView);
+        list.setAdapter(adapter);
+
+
+    }
+ }

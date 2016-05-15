@@ -15,6 +15,8 @@ public class MainScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_screen);
 
+
+
         overviewButton = findViewById(R.id.systemOverviewButton);
         signOut = findViewById(R.id.singOutButton);
 
@@ -46,4 +48,6 @@ public class MainScreenActivity extends AppCompatActivity {
         );
 
     }
+
+
 }

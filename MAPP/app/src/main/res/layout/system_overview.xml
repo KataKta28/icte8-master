@@ -37,18 +37,7 @@
         android:layout_above="@+id/setupButton"
         android:id="@+id/tableLayout"
         android:layout_alignParentStart="false"
-        android:layout_alignEnd="@+id/tableLayout2"><![CDATA[
-
-        TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-
-
-
-
-        ]]>
-
+        android:layout_alignEnd="@+id/tableLayout2">
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -61,31 +50,31 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Channel"
+                    android:text="@string/gasChannel"
                     android:id="@+id/gasChannel"
-                    android:layout_marginRight="22dp"
+                    android:layout_marginEnd="22dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Status"
+                    android:text="@string/gasStatus"
                     android:id="@+id/gasStatus"
-                    android:layout_marginRight="22dp"
+                    android:layout_marginEnd="22dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Level"
+                    android:text="@string/gasLevel"
                     android:id="@+id/gasLevel"
-                    android:layout_marginRight="22dp"
+                    android:layout_marginEnd="22dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="High"
+                    android:text="@string/gasHigh"
                     android:id="@+id/gasHigh"
                     android:layout_weight="1" />
             </LinearLayout>
@@ -97,59 +86,10 @@
 
             <ListView
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/gasListView1" />
+                android:layout_height="wrap_content"
+                android:id="@+id/gasListView" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/gasListView2" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/gasListView3" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/gasListView4" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/gasListView5" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/gasListView6" />
-        </TableRow>
     </TableLayout>
 
     <TableLayout
@@ -172,30 +112,31 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="22dp"
+                    android:layout_marginEnd="22dp"
                     android:layout_weight="1"
-                    android:text="@string/filterChannel" />
+                    android:text="@string/filterChannel"
+                    android:id="@+id/filterChannel" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Status"
+                    android:text="@string/filterStatus"
                     android:id="@+id/filterStatus"
-                    android:layout_marginRight="22dp"
+                    android:layout_marginEnd="22dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Level"
+                    android:text="@string/filterLevel"
                     android:id="@+id/filterLevel"
-                    android:layout_marginRight="22dp"
+                    android:layout_marginEnd="22dp"
                     android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="High"
+                    android:text="@string/filterHigh"
                     android:id="@+id/filterHigh"
                     android:layout_weight="1" />
             </LinearLayout>
@@ -207,58 +148,9 @@
 
             <ListView
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/filterListView1" />
+                android:layout_height="wrap_content"
+                android:id="@+id/filterListView" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/filterListView2" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/filterListView3" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/filterListView4" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/filterListView5" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/filterListView6" />
-        </TableRow>
     </TableLayout>
 </RelativeLayout>
