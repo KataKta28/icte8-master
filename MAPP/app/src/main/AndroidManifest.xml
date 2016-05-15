@@ -23,7 +23,8 @@
         </activity>
         <activity android:name=".ChannelSetup">
         </activity>
-
+        <activity android:name=".Contact">
+        </activity>
 
 
 
