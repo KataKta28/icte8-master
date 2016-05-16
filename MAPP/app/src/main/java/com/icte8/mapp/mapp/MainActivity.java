@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -80,41 +81,34 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View V) {
+                        try{
 
-/*                        if(validateUsername(username.getText().toString())){
-                            username.setError("Invalid Username");
-                            username.requestFocus();
-                        } else if (validatePassword(password.getText().toString())){
-                            password.setError("Invalid Password");
-                            password.requestFocus();
-                        }else {
+                            if (validateUsername(username.getText().toString().trim()) && (validatePassword(password.getText().toString().trim())))
+                                startActivity(new Intent(MainActivity.this, MainScreenActivity.class));
+                            else
+                                Toast.makeText(MainActivity.this, "Incorrect Username or Password", Toast.LENGTH_LONG).show();
+                        } catch(Exception x){
+                            Toast.makeText(MainActivity.this, "Incorrect password", Toast.LENGTH_LONG).show();
 
-                           //start activity goes here ..............corecteaza acoladele dupa
-                        }}*/
-                        startActivity(new Intent(MainActivity.this, MainScreenActivity.class));
-
-
-
-
-    }  } ); }
+                        }
+                      }
+    } ); }
 
 //This is where we will check the values against the DB
-
-    protected boolean validateUsername(String username) {
-        if(username!=null && username.length()<5){
+protected boolean  validateUsername (String x){
+    if (!x.equals("") )
+        return true;
+    else
+        return false;
+}
+    protected boolean validatePassword (String y){
+        if (!y.equals("") && (y.length()==4))
             return true;
-        }
         else
-        {
             return false;
-        }}
-    protected boolean validatePassword(String password) {
-        if(password!=null && password.length()==4){
-            return false;
-        }else
-        {
-            return true;
-        }}
+
+    }
+
 
 //Generate a salt 
     public static byte[] generateSalt(){

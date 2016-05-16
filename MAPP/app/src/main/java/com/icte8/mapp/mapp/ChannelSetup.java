@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.view.View;
+import android.widget.Toast;
 
 public class ChannelSetup extends AppCompatActivity {
-
 
     private View saveButton;
     private View cancelButton;
@@ -31,8 +31,6 @@ public class ChannelSetup extends AppCompatActivity {
                     }
                 }
         );
-
-
         saveButton.setOnClickListener(
 
                 new View.OnClickListener() {
@@ -40,40 +38,37 @@ public class ChannelSetup extends AppCompatActivity {
                     public void onClick(View V) {
 
                         try{
-                            if(filterValue(setFilterHigh.getText().toString())){
-                                setFilterHigh.setError("Invalid input");
+                            if (checkIfFilterEmpty(setFilterHigh.getText().toString().trim())){
+                                setFilterHigh.setError("Value required");
                                 setFilterHigh.requestFocus();
-                            } else if (gasValue(setGasHigh.getText().toString())){
-                               setGasHigh.setError("Invalid input");
-                                setGasHigh.requestFocus();
-                            }else {
-
-
-                            //here we push to the database
-
-                        }}
+                            } else if (checkIfGasEmpty(setGasHigh.getText().toString().trim())){
+                                    setGasHigh.setError("Value required");
+                                    setGasHigh.requestFocus();
+                            } else {
+                                //save shit to db
+                                finish();
+                                Toast.makeText(ChannelSetup.this, "Saved!", Toast.LENGTH_LONG).show();
+                            }
+                        }
                         catch(Exception x){
                             System.err.println( x.getClass().getName() + ": " + x.getMessage() + "The save has been unsuccessful");
                         }
                     }  } ); }
 
-
-
-
-    protected boolean filterValue(String setFilterHigh) {
-        if(setFilterHigh!=null){
+    protected boolean checkIfFilterEmpty (String x){
+      if (x.equals("") )
             return true;
-        }
         else
-        {
             return false;
-        }}
-    protected boolean gasValue(String setGasHigh) {
-        if(setGasHigh!=null){
-            return false;
-        }else
-        {
+
+}
+    protected boolean checkIfGasEmpty (String y){
+        if (y.equals(""))
             return true;
-        }}
+        else
+            return false;
+
+    }
+
 }
 
