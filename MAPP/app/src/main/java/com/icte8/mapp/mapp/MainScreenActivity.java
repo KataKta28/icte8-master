@@ -46,7 +46,8 @@ public class MainScreenActivity extends AppCompatActivity {
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View x){
-                    finish();
+
+                         finish();
                         System.exit(0);
                     }
                 }

@@ -42,20 +42,19 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText username = (EditText) findViewById(R.id.usernameInput);
         final EditText password = (EditText) findViewById(R.id.passwordInput);
-
+        /*
         try {
+            MongoClientURI uri = new MongoClientURI( "localhost", 27017);
+            MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
+            System.out.println(db.getCollection("detector_data").find());
+            BasicDBObject query = new BasicDBObject();
+            BasicDBObject field = new BasicDBObject();
+            field.put("serial", 1);
+            DBCursor cursor = db.getCollection("detector_data").find(query, field);
 
-//        MongoClientURI uri = new MongoClientURI( "localhost", 27017);
-//        MongoDatabase db = mongoClient.getDatabase(uri.getDatabase());
-//            System.out.println(db.getCollection("detector_data").find());
-//            BasicDBObject query = new BasicDBObject();
-//            BasicDBObject field = new BasicDBObject();
-//            field.put("serial", 1);
-//            DBCursor cursor = db.getCollection("detector_data").find(query, field);
-
-//            int channel = 1;
-//            DBObject searchByChannel = new BasicDBObject("channel", new BsonInt32(channel));
-//            DBObject found = collectionCall.find(searchByChannel);
+            int channel = 1;
+            DBObject searchByChannel = new BasicDBObject("channel", new BsonInt32(channel));
+            DBObject found = collectionCall.find(searchByChannel);
 
             MongoClient mongoClient = new MongoClient("localhost", 27017);
             DB db = mongoClient.getDB("icte8LAD_db");
@@ -75,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (Exception e) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() + "HALLOOOOOOO");
-        }
+        }*/
         signIn = findViewById(R.id.signinButton);
         signIn.setOnClickListener(
                 new View.OnClickListener() {
@@ -123,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         RANDOM.nextBytes(salt);
         return salt;
     }
-
+//hash the password
     public static byte[] hash(char[] password, byte[] salt){
         PBEKeySpec spec = new PBEKeySpec(password, salt, ITERATIONS, KEY_LENGTH);
         Arrays.fill(password, Character.MIN_VALUE);

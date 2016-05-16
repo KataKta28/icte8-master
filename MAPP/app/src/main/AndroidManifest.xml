@@ -8,26 +8,25 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name="com.icte8.mapp.mapp.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainScreenActivity">
+        <activity android:name="com.icte8.mapp.mapp.MainActivity">
         </activity>
-        <activity android:name=".SystemOverview">
+        <activity android:name="com.icte8.mapp.mapp.MainScreenActivity">
+        </activity>
+        <activity android:name="com.icte8.mapp.mapp.SystemOverview">
     </activity>
-        <activity android:name=".ChannelOverview">
+        <activity android:name="com.icte8.mapp.mapp.ChannelOverview">
         </activity>
-        <activity android:name=".ChannelSetup">
+        <activity android:name="com.icte8.mapp.mapp.ChannelSetup">
         </activity>
-        <activity android:name=".Contact">
+        <activity android:name="com.icte8.mapp.mapp.Contact">
         </activity>
-
-
-
     </application>
 
 </manifest>
