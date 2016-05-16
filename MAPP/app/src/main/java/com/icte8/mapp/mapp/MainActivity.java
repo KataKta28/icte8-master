@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
             BasicDBObject key = new BasicDBObject();
             BasicDBObject value = new BasicDBObject();
-            value.put("channel", 1);
+            value.put("channel", 1); 
 
             DBCursor cursor = collectionCall.find(key, value);
             while (cursor.hasNext()) {
