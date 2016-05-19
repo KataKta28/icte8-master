@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MAPP</string>
 
-//Text Views
+    <!-- Text Views -->
     <string name="daspos">DASPOS</string>
     <string name="loginText">Log In</string>
     <string name="mainScreenText">DASPOS LAS-10</string>
@@ -15,18 +15,21 @@
 
     <string name="filter">Filter</string>
     <string name="gas">Gas</string>
+    <string name="currentValueText">Current</string>
 
     <string name="filterChannel">Channel</string>
     <string name="filterStatus">Status</string>
     <string name="filterLevel">Level</string>
     <string name="filterHigh">High</string>
+    <string name="filterHighValue"></string>
 
     <string name="gasChannel">Channel</string>
     <string name="gasStatus">Status</string>
     <string name="gasLevel">Level</string>
     <string name="gasHigh">High</string>
+    <string name="gasHighValue"></string>
 
-    //Contact information
+    <!-- Contact information -->
     
     <string name="contact">Contact</string>
     <string name="contact_phone">Phone:</string>
@@ -41,14 +44,14 @@
     <string name="contact_email_admin_adr">admin@daspos.com</string>
     
 
-//Inputs
+    <!-- Inputs -->
 
     <string name="usernameInput"></string>
     <string name="inputFilterHigh"></string>
     <string name="inputFilterClean"></string>
     <string name="inputGasAlarm"></string>
 
-//Buttons
+    <!-- Buttons -->
 
     <string name="signInButton">Sign In</string>
     <string name="recoverPassButton">Recover Password</string>
@@ -63,7 +66,6 @@
     <string name="saveSetup">Save</string>
     <string name="cancelSetup">Cancel</string>
 
-//
 
 
 
