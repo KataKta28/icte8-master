@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private View signIn;
     //stuff needed for hashing the password
     private static final Random RANDOM = new SecureRandom();
-    private static  final int ITERATIONS = 10000;
+    private static final int ITERATIONS = 10000;
     private static final int KEY_LENGTH = 256;
 
 
