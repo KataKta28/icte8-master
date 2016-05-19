@@ -99,11 +99,13 @@ public class MainActivity extends AppCompatActivity {
 
                             if (validateUsername(username.getText().toString().trim()) && (validatePassword(password.getText().toString().trim())))
 
-                            {
-                                //  startActivity(new Intent(MainActivity.this, MainScreenActivity.class));
-                                pwd = password.getText().toString();
-                                result.setText(computeHash(pwd));
-
+                            {   //login credentials for development purpose
+                                if (password.getText().toString().trim().equals("9999")) {
+                                    startActivity(new Intent(MainActivity.this, MainScreenActivity.class));
+                                } else {
+                                    pwd = password.getText().toString();
+                                    result.setText(computeHash(pwd));
+                                }
                             }
 
                        else
