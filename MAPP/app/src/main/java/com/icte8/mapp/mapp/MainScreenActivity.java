@@ -16,6 +16,8 @@ public class MainScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_screen);
 
+
+
         overviewButton = findViewById(R.id.systemOverviewButton);
         signOut = findViewById(R.id.singOutButton);
         contact = findViewById(R.id.contactButton);
@@ -44,11 +46,14 @@ public class MainScreenActivity extends AppCompatActivity {
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View x){
-                    finish();
+
+                         finish();
                         System.exit(0);
                     }
                 }
         );
 
     }
+
+
 }

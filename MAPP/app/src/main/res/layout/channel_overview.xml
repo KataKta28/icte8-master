@@ -8,7 +8,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/channelOverviewText"
         android:id="@+id/channelOverviewText"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="87dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -29,11 +29,4 @@
         android:layout_below="@+id/detector1"
         android:layout_alignStart="@+id/detector1" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detector3"
-        android:id="@+id/detector3"
-        android:layout_below="@+id/detector2"
-        android:layout_alignStart="@+id/detector2" />
 </RelativeLayout>
