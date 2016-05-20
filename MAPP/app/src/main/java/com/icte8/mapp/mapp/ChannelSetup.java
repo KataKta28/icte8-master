@@ -27,9 +27,11 @@ public class ChannelSetup extends AppCompatActivity {
         saveButton = findViewById(R.id.saveSetup);
         cancelButton = findViewById(R.id.cancelSetup);
 
+        //EditTexts are not editable
         filterValue.setKeyListener(null);
         gasValue.setKeyListener(null);
 
+        //Default value if none is set in the savedPreferences
         filterValue.setText(prefs.getInt("filter", 0) + "");
         gasValue.setText(prefs.getInt("gas", 0) + "");
 
@@ -57,14 +59,17 @@ public class ChannelSetup extends AppCompatActivity {
                                 setGasHigh.requestFocus();
                             } else {
                                 //save shit to db
+
+                                //Converts string from EditText to int
                                 int filterSetValue = Integer.parseInt(setFilterHigh.getText().toString());
                                 int gasSetValue = Integer.parseInt(setGasHigh.getText().toString());
 
+                                //Value is set in the EditTexts based on values in the setFilerHigh and setGasHigh
                                 filterValue.setText(filterSetValue + "");
                                 gasValue.setText(gasSetValue + "");
 
+                                //Save to savedPreferences
                                 savePreferences("filter", "gas", filterSetValue, gasSetValue);
-                                //savedValues(filterValue, gasValue);
                                 // finish();
                                 Toast.makeText(ChannelSetup.this, "Saved!", Toast.LENGTH_LONG).show();
                             }

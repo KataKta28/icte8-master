@@ -8,6 +8,7 @@ import android.view.View;
 public class MainScreenActivity extends AppCompatActivity {
 
     private View overviewButton;
+    private View listAccounts;
     private View signOut;
     private View contact;
 
@@ -17,8 +18,8 @@ public class MainScreenActivity extends AppCompatActivity {
         setContentView(R.layout.main_screen);
 
 
-
         overviewButton = findViewById(R.id.systemOverviewButton);
+        listAccounts = findViewById(R.id.listOfAccountsButton);
         signOut = findViewById(R.id.singOutButton);
         contact = findViewById(R.id.contactButton);
 
@@ -28,7 +29,14 @@ public class MainScreenActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View V) {
                         startActivity(new Intent(MainScreenActivity.this, SystemOverview.class));
+                    }
+                });
 
+        listAccounts.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(MainScreenActivity.this, ListOfAccounts.class));
                     }
                 });
 
@@ -37,10 +45,8 @@ public class MainScreenActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View V) {
                         startActivity(new Intent(MainScreenActivity.this, Contact.class));
-
                     }
                 });
-
 
         signOut.setOnClickListener(
                 new View.OnClickListener(){
@@ -50,8 +56,7 @@ public class MainScreenActivity extends AppCompatActivity {
                          finish();
                         System.exit(0);
                     }
-                }
-        );
+                });
 
     }
 

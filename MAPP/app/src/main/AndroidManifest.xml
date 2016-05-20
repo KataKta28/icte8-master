@@ -20,7 +20,9 @@
         <activity android:name="com.icte8.mapp.mapp.MainScreenActivity">
         </activity>
         <activity android:name="com.icte8.mapp.mapp.SystemOverview">
-    </activity>
+        </activity>
+        <activity android:name="com.icte8.mapp.mapp.ListOfAccounts">
+        </activity>
         <activity android:name="com.icte8.mapp.mapp.ChannelOverview">
         </activity>
         <activity android:name="com.icte8.mapp.mapp.ChannelSetup">
