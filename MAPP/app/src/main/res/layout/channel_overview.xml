@@ -8,25 +8,27 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/channelOverviewText"
         android:id="@+id/channelOverviewText"
-        android:layout_marginTop="87dp"
+        android:layout_marginTop="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detector1"
-        android:id="@+id/detector1"
-        android:layout_marginTop="69dp"
-        android:layout_below="@+id/channelOverviewText"
-        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/chnOverviewll" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detector2"
-        android:id="@+id/detector2"
-        android:layout_below="@+id/detector1"
-        android:layout_alignStart="@+id/detector1" />
+    <!--
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detector1"
+                    android:id="@+id/detectorBtn"
+                    android:layout_marginBottom="15dp"
+                    android:textAlignment="center"/>
 
+            </LinearLayout>
+        -->
 </RelativeLayout>
