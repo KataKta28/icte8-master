@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 public class ChannelOverview extends AppCompatActivity {
 
-    private View channel1Overview;
-    private View channel2Overview;
+//    private View channel1Overview;
+//    private View channel2Overview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -25,39 +25,39 @@ public class ChannelOverview extends AppCompatActivity {
         final LinearLayout lm = (LinearLayout) findViewById(R.id.chnOverviewll);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
-        int detectNo = 2;
+        int detectNo = 3;
 
-        for (int i = 0 ; i < detectNo; i++) {
-            int id = i+1;
-            LinearLayout ll = new LinearLayout(this);
-            ll.setOrientation(LinearLayout.VERTICAL);
-            ll.setGravity(Gravity.CENTER_HORIZONTAL);
-            params.setMargins(0, 10, 0, 0); // Doesn't work... Want more space between buttons
+            for (int i = 0 ; i < detectNo; i++) {
+                int id = i+1;
+                LinearLayout ll = new LinearLayout(this);
+                ll.setOrientation(LinearLayout.VERTICAL);
+                ll.setGravity(Gravity.CENTER_HORIZONTAL);
+                params.setMargins(0, 10, 0, 0); // Doesn't work... Want more space between buttons
 
-            final Button chnOverviewBtn = new Button(this);
-            chnOverviewBtn.setId(id);
-            chnOverviewBtn.setText("Detector " + id);
-            chnOverviewBtn.setLayoutParams(params);
+                final Button chnOverviewBtn = new Button(this);
+                chnOverviewBtn.setId(id);
+                chnOverviewBtn.setText("Detector " + id);
+                chnOverviewBtn.setLayoutParams(params);
 
-            final int index = i;
+                final int index = i;
 
-            chnOverviewBtn.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Log.i("TAG", "index: " + index);
+                chnOverviewBtn.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Log.i("TAG", "index: " + index);
 
-                    Toast.makeText(getApplicationContext(), "Clicked button index: " + index, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Clicked button index: " + index, Toast.LENGTH_LONG).show();
 
-                    startActivity(new Intent(ChannelOverview.this, ChannelSetup.class));
+                        startActivity(new Intent(ChannelOverview.this, ChannelSetup.class));
 
-                }
-            });
+                    }
+                });
 
-            ll.addView(chnOverviewBtn, params);
-            assert lm != null;
-            lm.addView(ll);
+                ll.addView(chnOverviewBtn, params);
+                assert lm != null;
+                lm.addView(ll);
 
-        }
+            }
 
 
 

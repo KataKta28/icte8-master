@@ -10,6 +10,7 @@ import android.widget.ListView;
 public class SystemOverview extends AppCompatActivity{
 
 private View channelSetupButton;
+public static final String BASE_URL = "http://www.icte8.ga/administrator/...";
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
