@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -27,15 +28,15 @@ public class ChannelOverview extends AppCompatActivity {
         int detectNo = 2;
 
         for (int i = 0 ; i < detectNo; i++) {
-            int count = i+1;
+            int id = i+1;
             LinearLayout ll = new LinearLayout(this);
             ll.setOrientation(LinearLayout.VERTICAL);
             ll.setGravity(Gravity.CENTER_HORIZONTAL);
             params.setMargins(0, 10, 0, 0); // Doesn't work... Want more space between buttons
 
             final Button chnOverviewBtn = new Button(this);
-            chnOverviewBtn.setId(i+1);
-            chnOverviewBtn.setText("Detector " + count);
+            chnOverviewBtn.setId(id);
+            chnOverviewBtn.setText("Detector " + id);
             chnOverviewBtn.setLayoutParams(params);
 
             final int index = i;
