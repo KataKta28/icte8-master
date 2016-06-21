@@ -16,6 +16,8 @@ import com.koushikdutta.ion.Ion;
 import com.koushikdutta.ion.Response;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
+
+import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.Random;
 
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View V) {
                         try {
 
+
                             if (validateUsername(username.getText().toString().trim()) && (validatePassword(password.getText().toString().trim())))
                             {
                                 String usr = username.getText().toString().trim();
@@ -67,10 +70,8 @@ public class MainActivity extends AppCompatActivity {
                                 json.addProperty("name", usr);
                                 json.addProperty("password", pwd);
 
-                                //   Toast.makeText(MainActivity.this, result.toString(),Toast.LENGTH_LONG).show();
-                                //   startActivity(new Intent(MainActivity.this, MainScreenActivity.class));
 
-                                /*
+
                                 Ion.with(MainActivity.this)
                                         .load("http://192.168.0.97:8080/api/authenticate")
                                         .setJsonPojoBody(json)
@@ -80,27 +81,37 @@ public class MainActivity extends AppCompatActivity {
                                             @Override
                                             public void onCompleted(Exception e, Response<JsonObject> result) {
 
+                                              //   Toast.makeText(MainActivity.this, result.toString(),Toast.LENGTH_LONG).show();
+                                            //    startActivity(new Intent(MainActivity.this, MainScreenActivity.class));
+                                                 if (result.getHeaders().code() == 404) {
+                                                    Toast.makeText(MainActivity.this, "Incorrect Username or Password", Toast.LENGTH_LONG).show();
+                                                } else if (result.getHeaders().code() == 200) {
+                                                    startActivity(new Intent(MainActivity.this, MainScreenActivity.class));
+                                                }
                                             }
                                         });
 
-                            */
+
+
+
+
+  /*
+
+
                                 Ion.with(MainActivity.this)
-                                        .load("http://192.168.0.97/api/authenticate")
+                                        .load("http://192.168.0.97:8080/api/authenticate")
                                         .asString()
                                         .withResponse()
                                         .setCallback(new FutureCallback<Response<String>>() {
                                             @Override
                                             public void onCompleted(Exception e, Response<String> result) {
 
-                                                if (result.getHeaders().code() == 404) {
-                                                    Toast.makeText(MainActivity.this, "Incorrect Username or Password", Toast.LENGTH_LONG).show();
-                                                } else if (result.getHeaders().code() == 200) {
-                                                    startActivity(new Intent(MainActivity.this, MainScreenActivity.class));
-                                                }
+
+
+
                                             }
 
-                                        });
-
+                                        });*/
 
 
                             }
