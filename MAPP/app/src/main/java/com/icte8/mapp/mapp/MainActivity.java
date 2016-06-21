@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.passwordInput);
 
         try { //establish connection to server
-             MongoClient mongoClient = new MongoClient("192.168.0.53", 8080);
+             MongoClient mongoClient = new MongoClient("192.168.0.52", 8080);
              MongoDatabase db = mongoClient.getDatabase("backend");
 
         } catch (Exception e) {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                                 json.addProperty("password", pwd);
 
                                 Ion.with(MainActivity.this)
-                                        .load("http://192.168.0.53:8080/api/authenticate")
+                                        .load("http://192.168.0.52:8080/api/authenticate")
                                         .setJsonPojoBody(json)
                                         .asJsonObject()
                                         .withResponse()
@@ -78,16 +78,18 @@ public class MainActivity extends AppCompatActivity {
 
                                                      //  Toast.makeText(MainActivity.this, result.getResult().toString() ,Toast.LENGTH_LONG).show();
                                                      response = result.getResult().toString();
-                                                     temptoken = response.split(" ");
+                                                     temptoken = response.split(":");
                                                      token = temptoken[1];
                                                      Log.d("token", token);
 
+                                                 //    startActivity(new Intent(MainActivity.this, MainScreenActivity.class));
                                                      Intent intent = new Intent(MainActivity.this, MainScreenActivity.class);
                                                      intent.putExtra("key", token);
                                                      startActivity(intent);
                                                 }
                                             }
                                         });
+
   /*                            Ion.with(MainActivity.this)
                                         .load("http://192.168.0.97:8080/api/authenticate")
                                         .asString()

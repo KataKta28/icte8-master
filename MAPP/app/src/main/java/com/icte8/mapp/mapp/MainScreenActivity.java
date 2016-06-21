@@ -39,33 +39,43 @@ public class MainScreenActivity extends AppCompatActivity {
                     public void onClick(View V) {
                         try {
 
-
-
                             Intent intent= getIntent();
-                            String value = intent.getStringExtra("key");
-                            Log.d("2nd token", value);
+                            String myToken = intent.getStringExtra("key");
+                            Log.d("2nd token", myToken);
+                            JsonObject json2 = new JsonObject();
+                            json2.addProperty("token", myToken);
 
                         /*
-
-                              String myToken = getIntent().getStringExtra("key");
+                            String myToken = getIntent().getStringExtra("key");
                             Log.d("2nd token", myToken);
+
+                                    .asString()
+                                    .setCallback(new FutureCallback<String>() {
+                                        @Override
+                                        public void onCompleted(Exception e, String result) {
+
+                                            System.out.println("Result from Ovi: " + result.toString());
+
+                                        }
+                                    });
+
 
 
                             JsonObject jsonToken = new JsonObject();
                             jsonToken.addProperty("jwt", myToken);
+ */
                             Ion.with(MainScreenActivity.this)
-                                    .load("http://192.168.0.97:8080/?????")
-                                    .setJsonPojoBody(jsonToken)
-                                    .asJsonObject()
+                                    .load("http://192.168.0.52:8080/api/memberinfo")
+                                    .setHeader("Authorization", myToken)
+                                    .asString()
                                     .withResponse()
-                                    .setCallback(new FutureCallback<Response<JsonObject>>() {
+                                    .setCallback(new FutureCallback<Response<String>>() {
                                         @Override
-                                        public void onCompleted(Exception e, Response<JsonObject> result) {
+                                        public void onCompleted(Exception e, Response<String> result) {
 
+                                            System.out.println("Answer is: "+result);
                                         }
                                     });
-                    */
-
 
                             startActivity(new Intent(MainScreenActivity.this, SystemOverview.class));
                         } catch (Exception x) {
